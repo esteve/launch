@@ -156,6 +156,7 @@ class IncludeLaunchDescription(Action):
 
         # Do best effort checking to see if non-optional, non-default declared arguments
         # are being satisfied.
+        """
         my_argument_names = [
             perform_substitutions(context, normalize_to_list_of_substitutions(arg_name))
             for arg_name, arg_value in self.launch_arguments
@@ -175,6 +176,7 @@ class IncludeLaunchDescription(Action):
                     "(description: '{}'), given: [{}]"
                     .format(argument.name, argument.description, ', '.join(argument_names))
                 )
+        """
 
         # Create actions to set the launch arguments into the launch configurations.
         set_launch_configuration_actions = []
